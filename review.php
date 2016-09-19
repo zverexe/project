@@ -3,7 +3,7 @@
   require_once 'functions.php';
 
   $id = $_GET['id'];
-  $select_query = "SELECT title,text,content_pic,category,time
+  $select_query = "SELECT title,text,content_pic,time
 FROM content c
 WHERE c.id = ?";
  
@@ -49,15 +49,14 @@ WHERE c.id = ?";
             <div class="items">
 		          <div class="items_title">
                 <?php print $title ?>
-                <br>
+              </div>
                 <div class="my_pic"><img src="<?php print $user_pic ?>" alt="">
               </div>
                 <?php print $text ?>
-                <br>
+               
                 <div class="created">
                 <?php print $created ?>
-                </div>
-             
+                </div>  
                 
               </div>
           </div>
